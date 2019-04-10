@@ -11,6 +11,22 @@ exports.devServer = () => ({
   },
 });
 
+exports.js = ({
+  include,
+  exclude,
+} = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include,
+        exclude,
+        use: 'babel-loader',
+      },
+    ],
+  },
+});
+
 exports.page = ({
   title = 'App',
 } = {}) => ({

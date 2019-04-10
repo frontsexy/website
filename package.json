@@ -6,9 +6,9 @@
   "scripts": {
     "build": "webpack --env production",
     "build:dev": "webpack",
-    "lint": "eslint .",
     "start": "webpack-dev-server --inline --hot",
-    "test": "npm run lint"
+    "test": "npm run test:lint",
+    "test:lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,11 @@
   "private": true,
   "homepage": "https://github.com/frontsexy/website#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.2",
@@ -34,5 +38,9 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
