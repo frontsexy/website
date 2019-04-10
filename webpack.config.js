@@ -4,6 +4,7 @@ const parts = require('./config/webpackParts');
 
 const paths = {
   app: path.join(__dirname, 'src'),
+  template: path.join(__dirname, 'src/index.html'),
 };
 
 const common = merge([
@@ -11,6 +12,7 @@ const common = merge([
     include: paths.app,
   }),
   parts.page({
+    template: paths.template,
     title: 'Сделайте мне красиво',
   }),
   {

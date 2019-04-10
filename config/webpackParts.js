@@ -28,10 +28,12 @@ exports.js = ({
 });
 
 exports.page = ({
+  template,
   title = 'App',
 } = {}) => ({
   plugins: [
     new HtmlWebpackPlugin({
+      template,
       title,
     }),
   ],
