@@ -8,7 +8,7 @@
     "build:dev": "webpack",
     "start": "webpack-dev-server --inline --hot",
     "test": "npm run test:lint",
-    "test:lint": "eslint ."
+    "test:lint": "eslint --ext .jsx --ext .js ."
   },
   "repository": {
     "type": "git",

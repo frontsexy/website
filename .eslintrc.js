@@ -16,5 +16,6 @@ module.exports = {
       'varsIgnorePattern': 'unused',
     }],
     'prefer-promise-reject-errors': 'off',
+    'react/prop-types': 'off',
   },
 };

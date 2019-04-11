@@ -17,9 +17,7 @@ const common = merge([
   }),
   {
     resolve: {
-      alias: {
-        '@': paths.app,
-      },
+      extensions: ['.js', '.jsx'],
     },
   },
 ]);
