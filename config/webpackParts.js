@@ -21,7 +21,10 @@ exports.js = ({
         test: /\.jsx?$/,
         include,
         exclude,
-        use: 'babel-loader',
+        use: [
+          'reshadow/webpack/loader',
+          'babel-loader',
+        ],
       },
     ],
   },
