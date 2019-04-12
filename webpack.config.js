@@ -7,8 +7,9 @@ const paths = {
   template: path.join(__dirname, 'src/index.html'),
 };
 
-const common = merge([
+const common = env => merge([
   parts.js({
+    env,
     include: paths.app,
   }),
   parts.page({
@@ -23,7 +24,7 @@ const common = merge([
 ]);
 
 const development = merge([
-  common,
+  common('development'),
   parts.devServer(),
   {
     mode: 'development',
@@ -31,7 +32,13 @@ const development = merge([
 ]);
 
 const production = merge([
-  common,
+  common('production'),
+  {
+    output: {
+      filename: '[name].[contenthash].js',
+      chunkFilename: '[id].[contenthash].js',
+    },
+  },
   {
     mode: 'production',
   },
