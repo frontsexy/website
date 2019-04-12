@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'reshadow';
 import Section from '../Section';
-import styles from './styles.shadow.css';
+import styles from './styles.css';
 
 const Link = ({
   children,

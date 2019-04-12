@@ -1,6 +1,8 @@
 module.exports = {
   plugins: [
-    'macros',
+    ['reshadow/babel', {
+      files: /\.css$/,
+    }],
   ],
   presets: [
     '@babel/preset-react',
