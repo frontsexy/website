@@ -1,4 +1,6 @@
 import React from 'react';
+import { hot } from 'react-hot-loader/root';
+
 import Authors from '../Authors';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -14,4 +16,4 @@ const App = () => (
   </Page>
 );
 
-export default App;
+export default hot(App);

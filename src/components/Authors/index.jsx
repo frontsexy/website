@@ -17,7 +17,7 @@ const Link = ({
 const Authors = () => styled(styles)(
   <Section title="Ведущие">
     <ul>
-      <Link href="https://github.com/begebot">Денис</Link>
+      <Link href="https://twitter.com/begebot">Денис</Link>
       <Link href="https://github.com/maxvektor">Миша</Link>
       <Link href="https://quasiyoke.me">Петя</Link>
     </ul>
