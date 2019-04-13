@@ -1,23 +1,20 @@
 import React from 'react';
+import Link from '../Link';
 import Section from '../Section';
-
-const Link = ({
-  children,
-  href,
-}) => (
-  <li>
-    <a href={href}>
-      {children}
-    </a>
-  </li>
-);
+import { LINKS } from '../../constants';
 
 const Links = () => (
   <Section title="Ссылки">
     <ul>
-      <Link href="https://soundcloud.com/begebot">Soundcloud</Link>
-      <Link href="https://twitter.com/frontsexy">Twitter</Link>
-      <Link href="https://t.me/smk_chat">Чатик в Телеграме</Link>
+      <li>
+        <Link href={LINKS.soundcloud}>Soundcloud</Link>
+      </li>
+      <li>
+        <Link href={LINKS.twitter}>Twitter</Link>
+      </li>
+      <li>
+        <Link href={LINKS.telegram}>Чатик в Телеграме</Link>
+      </li>
     </ul>
   </Section>
 );

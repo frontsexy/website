@@ -1,0 +1,15 @@
+:global(html), :global(body), :global(#app) {
+  height: 100%;
+  margin: 0;
+}
+
+:global(#app) {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 0 8px;
+}
