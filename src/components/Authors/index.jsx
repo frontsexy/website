@@ -1,27 +1,22 @@
 import React from 'react';
-import styled from 'reshadow';
+import Link from '../Link';
 import Section from '../Section';
-import styles from './styles.css';
+import { LINKS } from '../../constants';
 
-const Link = ({
-  children,
-  href,
-}) => styled(styles)(
-  <li>
-    <a href={href}>
-      {children}
-    </a>
-  </li>,
-);
-
-const Authors = () => styled(styles)(
+const Authors = () => (
   <Section title="Ведущие">
     <ul>
-      <Link href="https://twitter.com/begebot">Денис</Link>
-      <Link href="https://github.com/maxvektor">Миша</Link>
-      <Link href="https://quasiyoke.me">Петя</Link>
+      <li>
+        <Link href={LINKS.begebot}>Денис</Link>
+      </li>
+      <li>
+        <Link href={LINKS.maxvektor}>Миша</Link>
+      </li>
+      <li>
+        <Link href={LINKS.quasiyoke}>Петя</Link>
+      </li>
     </ul>
-  </Section>,
+  </Section>
 );
 
 export default Authors;

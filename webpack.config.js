@@ -4,7 +4,7 @@ const parts = require('./config/webpackParts');
 
 const paths = {
   app: path.join(__dirname, 'src'),
-  template: path.join(__dirname, 'src/index.html'),
+  template: path.join(__dirname, 'assets/index.html'),
 };
 
 const common = env => merge([

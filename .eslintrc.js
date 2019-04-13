@@ -9,6 +9,7 @@ module.exports = {
   rules: {
     'function-paren-newline': ['error', 'consistent'],
     'import/prefer-default-export': 'off',
+    'jsx-a11y/accessible-emoji': 'off',
     'no-await-in-loop': 'off',
     'no-continue': 'off',
     'no-unused-vars': ['error', {
