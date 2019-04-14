@@ -1,0 +1,56 @@
+version: '3.3'
+services:
+  balancer:
+    image: nginx:1.15.11
+    restart: always
+    volumes:
+      - ~/public/:/usr/share/nginx/
+      - ~/sites-enabled/:/etc/nginx/conf.d/
+      - ~/certs/:/etc/nginx/certs/
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - website
+      - webhook
+  website:
+    build: .
+    image: frontsexy/website
+    secrets:
+      - db_name
+      - db_password
+      - db_url
+      - db_user
+    depends_on:
+      - db
+    volumes:
+      - ~/public/front.sexy/:/frontsexywebsite/public/
+  db:
+    image: mongo:4.1.10
+    environment:
+      MONGO_INITDB_ROOT_USERNAME_FILE: /run/secrets/db_user
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/db_password
+    restart: always
+    secrets:
+      - db_user
+      - db_password
+    volumes:
+      - ./db/:/data/db/
+  webhook:
+    image: quasiyoke/docker-webhook
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./scripts/:/app/hooks/
+    secrets:
+      - webhook_secret
+secrets:
+  db_name:
+    file: ./secrets/db_name
+  db_url:
+    file: ./secrets/db_url
+  db_user:
+    file: ./secrets/db_user
+  db_password:
+    file: ./secrets/db_password
+  webhook_secret:
+    file: ./secrets/webhook_secret

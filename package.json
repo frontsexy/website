@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack --env production",
     "build:dev": "webpack",
     "start": "NODE_ENV=development webpack-dev-server --inline --hot",
-    "test": "npm run test:lint",
+    "test": "yarn run test:lint",
     "test:lint": "eslint --ext .jsx --ext .js ."
   },
   "repository": {
@@ -21,6 +21,10 @@
   },
   "private": true,
   "homepage": "https://github.com/frontsexy/website#readme",
+  "engines": {
+    "node": "^11.10.0",
+    "yarn": "^1.3.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
@@ -43,6 +47,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "next": "^8.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.3",
