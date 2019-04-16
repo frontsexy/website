@@ -4,6 +4,6 @@ export const LINKS = {
   quasiyoke: 'https://quasiyoke.me',
   self: 'https://front.sexy',
   soundcloud: 'https://soundcloud.com/begebot',
-  telegram: 'https://t.me/smk_chat',
+  telegram: 'https://t.me/frontsexy',
   twitter: 'https://twitter.com/frontsexy',
 };
