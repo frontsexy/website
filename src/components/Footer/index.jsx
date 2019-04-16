@@ -8,27 +8,31 @@ const Link = ({
   title,
   href,
 }) => styled(styles)(
-  <a
-    href={href}
-    title={title}
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <span
-      role="img"
-      aria-label={`Эмоджи ${title}`}
+  <li>
+    <a
+      href={href}
+      title={title}
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      {children}
-    </span>
-  </a>,
+      <span
+        role="img"
+        aria-label={`Эмоджи ${title}`}
+      >
+        {children}
+      </span>
+    </a>
+  </li>,
 );
 
 const Footer = () => styled(styles)(
   <footer>
-    <Link title="Пётр" href={LINKS.quasiyoke}>👨‍💻</Link>
-    <Link title="Миша" href={LINKS.maxvektor}>👨🏽‍💻</Link>
-    <Link title="Денис" href={LINKS.begebot}>👨🏿‍💻</Link>
-    <Link title="Подкаст" href={LINKS.soundcloud}>🎙</Link>
+    <ul>
+      <Link title="Пётр" href={LINKS.quasiyoke}>👨‍💻</Link>
+      <Link title="Миша" href={LINKS.maxvektor}>👨🏽‍💻</Link>
+      <Link title="Денис" href={LINKS.begebot}>👨🏿‍💻</Link>
+      <Link title="Подкаст" href={LINKS.soundcloudShow}>🎙</Link>
+    </ul>
   </footer>,
 );
 

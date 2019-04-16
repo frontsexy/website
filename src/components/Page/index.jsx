@@ -9,9 +9,9 @@ const Page = ({
 }) => styled(styles)(
   <>
     <Header />
-    <main>
+    <article>
       {children}
-    </main>
+    </article>
     <Footer />
   </>,
 );

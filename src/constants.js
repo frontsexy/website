@@ -3,7 +3,8 @@ export const LINKS = {
   maxvektor: 'https://github.com/maxvektor',
   quasiyoke: 'https://quasiyoke.me',
   self: 'https://front.sexy',
-  soundcloud: 'https://soundcloud.com/begebot',
+  soundcloudShow: 'https://soundcloud.com/begebot',
+  soundcloudPreshow: 'https://soundcloud.com/frontsexy-preshow',
   telegram: 'https://t.me/frontsexy',
   twitter: 'https://twitter.com/frontsexy',
 };

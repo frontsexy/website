@@ -4,5 +4,5 @@ import App from './components/App';
 
 ReactDom.render(
   <App />,
-  document.getElementById('app'),
+  document.querySelector('main'),
 );

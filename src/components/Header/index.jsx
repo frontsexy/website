@@ -5,10 +5,14 @@ import styles from './styles.css';
 
 const Header = () => styled(styles)(
   <header>
-    <a href={LINKS.self}>
-      <h1>Сделайте мне красиво</h1>
-    </a>
-    <p>Подкаст о фронтенд-разработке</p>
+    <dl>
+      <dt>
+        <h1>
+          <a href={LINKS.self}>Сделайте мне красиво</a>
+        </h1>
+      </dt>
+      <dd>Подкаст о фронтенд-разработке</dd>
+    </dl>
   </header>,
 );
 
