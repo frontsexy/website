@@ -6,7 +6,6 @@
 :global(main) {
   display: flex;
   flex-direction: column;
-  align-self: end;
 }
 
 article {

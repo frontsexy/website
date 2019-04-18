@@ -12,7 +12,6 @@ services:
       - '443:443'
     depends_on:
       - website
-      - webhook
   website:
     build: .
     image: frontsexy/website
@@ -25,6 +24,8 @@ services:
       - db
     volumes:
       - ~/public/front.sexy/:/frontsexywebsite/public/
+    labels:
+      com.centurylinklabs.watchtower.enable: true
   db:
     image: mongo:4.1.10
     environment:
@@ -36,13 +37,11 @@ services:
       - db_password
     volumes:
       - ./db/:/data/db/
-  webhook:
-    image: quasiyoke/docker-webhook
+  updater:
+    image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./scripts/:/app/hooks/
-    secrets:
-      - webhook_secret
+    command: --interval 30 --label-enable
 secrets:
   db_name:
     file: ./secrets/db_name
@@ -52,5 +51,3 @@ secrets:
     file: ./secrets/db_user
   db_password:
     file: ./secrets/db_password
-  webhook_secret:
-    file: ./secrets/webhook_secret

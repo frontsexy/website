@@ -28,7 +28,7 @@ const Link = ({
 const Footer = () => styled(styles)(
   <footer>
     <ul>
-      <Link title="Пётр" href={LINKS.quasiyoke}>👨‍💻</Link>
+      <Link title="Петя" href={LINKS.quasiyoke}>👨‍💻</Link>
       <Link title="Миша" href={LINKS.maxvektor}>👨🏽‍💻</Link>
       <Link title="Денис" href={LINKS.begebot}>👨🏿‍💻</Link>
       <Link title="Подкаст" href={LINKS.soundcloudShow}>🎙</Link>

@@ -11,7 +11,7 @@ const Header = () => styled(styles)(
           <a href={LINKS.self}>Сделайте мне красиво</a>
         </h1>
       </dt>
-      <dd>Подкаст о фронтенд-разработке</dd>
+      <dd>Подкаст о&nbsp;фронтенд-разработке</dd>
     </dl>
   </header>,
 );
