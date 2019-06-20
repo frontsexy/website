@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   balancer:
-    image: nginx:1.15.11
+    build: nginx
     restart: always
     volumes:
       - ~/public/:/usr/share/nginx/
